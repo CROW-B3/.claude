@@ -1,0 +1,301 @@
+{
+  "version": "2.0",
+  "description": "Multi-technology skill activation rules for AWS Data Lake platform with Python, Go, Next.js, and infrastructure as code",
+  "skills": {
+    "python-data-engineering": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "description": "Python data engineering with PySpark, Pandas, Airflow, AWS Glue, and ETL pipelines",
+      "promptTriggers": {
+        "keywords": [
+          "python",
+          "pyspark",
+          "pandas",
+          "airflow",
+          "dag",
+          "glue",
+          "etl",
+          "pipeline",
+          "data processing",
+          "spark",
+          "emr",
+          "fastapi",
+          "data validation",
+          "great expectations",
+          "streaming",
+          "kafka",
+          "kinesis"
+        ],
+        "intentPatterns": [
+          "(create|build|implement|design).*?(pipeline|etl|dag|data.*?flow)",
+          "(process|transform|clean).*?data",
+          "(optimize|tune|improve).*?(spark|pyspark|pipeline)",
+          "(how to|best practice).*?(airflow|pyspark|pandas|glue)",
+          "(debug|fix|troubleshoot).*?(pipeline|dag|spark.*?job)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/*.py",
+          "**/airflow/dags/**/*.py",
+          "**/glue/**/*.py",
+          "**/spark/**/*.py",
+          "**/etl/**/*.py",
+          "**/data-engineering/**/*.py",
+          "**/pipelines/**/*.py"
+        ],
+        "pathExclusions": [
+          "**/*.test.py",
+          "**/*_test.py",
+          "**/tests/**"
+        ],
+        "contentPatterns": [
+          "from pyspark",
+          "import pandas",
+          "from airflow",
+          "SparkSession",
+          "@dag\\(",
+          "GlueContext",
+          "from fastapi"
+        ]
+      }
+    },
+    "go-microservices": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "description": "Go microservices with clean architecture, gRPC, Gin/Echo, and cloud-native patterns",
+      "promptTriggers": {
+        "keywords": [
+          "golang",
+          "go service",
+          "microservice",
+          "grpc",
+          "gin",
+          "echo",
+          "fiber",
+          "api",
+          "rest api",
+          "backend",
+          "concurrency",
+          "goroutine",
+          "channel",
+          "clean architecture",
+          "dependency injection"
+        ],
+        "intentPatterns": [
+          "(create|build|implement).*?(service|microservice|api|grpc)",
+          "(refactor|restructure).*?(go|golang|architecture)",
+          "(optimize|improve).*?(performance|concurrency|go.*?code)",
+          "(how to|best practice).*?(go|golang|grpc|gin)",
+          "(handle|implement).*?(error|context|concurrent)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/*.go",
+          "**/go.mod",
+          "**/go.sum",
+          "**/proto/**/*.proto"
+        ],
+        "pathExclusions": [
+          "**/*_test.go",
+          "**/vendor/**"
+        ],
+        "contentPatterns": [
+          "package main",
+          "func main\\(",
+          "import.*gin",
+          "import.*echo",
+          "import.*grpc",
+          "go func\\(",
+          "make\\(chan"
+        ]
+      }
+    },
+    "nextjs-development": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "description": "Next.js 14+ with App Router, React Server Components, Server Actions, and modern frontend patterns",
+      "promptTriggers": {
+        "keywords": [
+          "nextjs",
+          "next.js",
+          "app router",
+          "server component",
+          "client component",
+          "server action",
+          "react",
+          "typescript",
+          "frontend",
+          "ui component",
+          "tailwind",
+          "shadcn",
+          "tanstack query",
+          "metadata",
+          "seo"
+        ],
+        "intentPatterns": [
+          "(create|build|implement).*?(component|page|route|api.*?route)",
+          "(setup|configure|implement).*?(nextjs|app.*?router|authentication)",
+          "(optimize|improve).*?(performance|seo|loading)",
+          "(how to|best practice).*?(nextjs|server.*?component|app.*?router)",
+          "(fetch|query|mutate).*?data"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "app/**/*.tsx",
+          "app/**/*.ts",
+          "components/**/*.tsx",
+          "lib/**/*.ts",
+          "**/next.config.js",
+          "**/next.config.mjs"
+        ],
+        "pathExclusions": [
+          "**/*.test.tsx",
+          "**/*.test.ts",
+          "**/*.spec.tsx"
+        ],
+        "contentPatterns": [
+          "'use client'",
+          "'use server'",
+          "export default async function",
+          "import.*next/",
+          "from '@tanstack/react-query'",
+          "useRouter.*from.*next/navigation"
+        ]
+      }
+    },
+    "data-lake-management": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "description": "Data lake architecture with medallion zones, AWS Glue, partitioning, schema evolution, and governance",
+      "promptTriggers": {
+        "keywords": [
+          "data lake",
+          "medallion",
+          "bronze",
+          "silver",
+          "gold",
+          "s3 bucket",
+          "glue catalog",
+          "athena",
+          "partition",
+          "schema evolution",
+          "data governance",
+          "data quality",
+          "parquet",
+          "delta lake",
+          "iceberg"
+        ],
+        "intentPatterns": [
+          "(design|architect|setup).*?(data.*?lake|medallion|zone)",
+          "(organize|structure).*?(s3|data|bucket)",
+          "(implement|setup).*?(partition|catalog|governance)",
+          "(optimize|improve).*?(query|cost|storage|performance)",
+          "(migrate|evolve).*?schema"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/data-lake/**/*",
+          "**/glue/**/*",
+          "**/athena/**/*"
+        ],
+        "contentPatterns": [
+          "medallion",
+          "bronze.*silver.*gold",
+          "GlueContext",
+          "athena",
+          "delta.*lake",
+          "s3://.*lake"
+        ]
+      }
+    },
+    "aws-infrastructure": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "description": "AWS infrastructure as code with Terraform, CDK, VPC, EKS, RDS, S3, security, and cost optimization",
+      "promptTriggers": {
+        "keywords": [
+          "terraform",
+          "aws cdk",
+          "cloudformation",
+          "infrastructure",
+          "iac",
+          "vpc",
+          "eks",
+          "rds",
+          "s3",
+          "lambda",
+          "iam",
+          "security group",
+          "aws",
+          "cloud",
+          "kubernetes"
+        ],
+        "intentPatterns": [
+          "(create|setup|provision).*?(infrastructure|aws|vpc|eks|rds)",
+          "(design|architect).*?(network|infrastructure|cloud)",
+          "(deploy|configure).*?(terraform|cdk|cloudformation)",
+          "(optimize|reduce).*?cost",
+          "(secure|harden|protect).*?(infrastructure|aws)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/*.tf",
+          "**/terraform/**/*",
+          "**/cdk/**/*.ts",
+          "**/infrastructure/**/*",
+          "**/*.yaml",
+          "**/*.yml"
+        ],
+        "pathExclusions": [
+          "**/node_modules/**",
+          "**/.terraform/**"
+        ],
+        "contentPatterns": [
+          "resource \"aws_",
+          "provider \"aws\"",
+          "module \"",
+          "terraform {",
+          "from aws_cdk",
+          "AWS::",
+          "apiVersion:.*apps/v1"
+        ]
+      }
+    }
+  },
+  "notes": {
+    "project_context": "Multi-technology AWS Data Lake platform with Python data engineering, Go microservices, Next.js frontend, and Terraform infrastructure",
+    "enforcement_types": {
+      "suggest": "Skill suggestion appears but doesn't block execution (recommended for most skills)",
+      "block": "Requires skill to be used before proceeding (use sparingly for critical guardrails)",
+      "warn": "Shows warning but allows proceeding (rarely used)"
+    },
+    "priority_levels": {
+      "critical": "Highest - Always trigger when matched (reserved for critical guardrails)",
+      "high": "Important - Trigger for most matches (recommended for domain skills)",
+      "medium": "Moderate - Trigger for clear matches",
+      "low": "Optional - Trigger only for explicit matches"
+    },
+    "customization_guide": {
+      "pathPatterns": "Adjust glob patterns to match your actual project structure. Use ** for recursive matching.",
+      "keywords": "Add domain-specific terms relevant to your project and team vocabulary",
+      "intentPatterns": "Use regex for flexible user intent matching. Test with actual user prompts.",
+      "contentPatterns": "Match specific code patterns, imports, or signatures unique to each technology"
+    },
+    "best_practices": {
+      "start_simple": "Begin with keyword triggers, add intent patterns as you learn common phrases",
+      "test_regularly": "Use the hook test commands to validate triggers work as expected",
+      "iterate": "Refine patterns based on actual usage and false positive/negative rates",
+      "team_alignment": "Share common terminology in keywords to improve activation accuracy"
+    }
+  }
+}
