@@ -1,25 +1,21 @@
 # Claude Code AI Development Infrastructure
 
-> **Intelligent development assistance powered by auto-activating skills and specialized expert agents**
-
-[![AI-Powered](https://img.shields.io/badge/AI-Claude%20Code-blue.svg)]()
-[![Skills](https://img.shields.io/badge/Skills-5%20Auto--Activating-green.svg)]()
-[![Agents](https://img.shields.io/badge/Agents-6%20Specialized-orange.svg)]()
+Intelligent development assistance powered by auto-activating skills and specialized expert agents for AWS Data Lake platform development.
 
 ## Overview
 
-This directory contains a comprehensive AI development infrastructure for the AWS Data Lake platform. It provides context-aware assistance across Python, Go, Next.js, and AWS technologies through an intelligent system of auto-activating skills and specialized expert agents.
+This directory contains an AI development infrastructure that provides context-aware assistance across Python, Go, Next.js, and AWS technologies through an intelligent system of auto-activating skills and specialized expert agents.
 
-## 🎯 Quick Start
+## Quick Start
 
-The system works automatically! Just start coding:
+The system operates automatically:
 
-1. **Edit any file** in the project
-2. **Skills auto-activate** based on file type and content
-3. **Get expert help** by accepting suggestions or invoking agents
-4. **Develop faster** with intelligent, context-aware assistance
+1. Edit any file in the project
+2. Skills auto-activate based on file type and content
+3. Get expert help by accepting suggestions or invoking agents
+4. Develop with intelligent, context-aware assistance
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 .claude/
@@ -38,102 +34,76 @@ The system works automatically! Just start coding:
 │   ├── devops-sre-agent.md
 │   └── fullstack-architect.md
 ├── hooks/                     # Auto-activation system
-│   ├── user-prompt-submit.sh
-│   └── activation-logic/
-├── docs/                      # Additional documentation
+│   ├── skill-activation-prompt.sh
+│   ├── skill-activation-prompt.ts
+│   └── post-tool-use-tracker.sh
+├── commands/                  # Custom slash commands
 ├── ARCHITECTURE.md            # System architecture
-├── GETTING_STARTED.md         # Onboarding guide
-├── SUMMARY.md                 # Infrastructure stats
 └── README.md                  # This file
 ```
 
-## 🤖 Auto-Activating Skills (5)
+## Auto-Activating Skills
 
-Skills automatically suggest themselves based on what you're working on:
+Skills automatically activate based on file context and content:
 
-### 1. Python Data Engineering
-**Activates when:** Working with `.py` files, PySpark, Pandas, Airflow
-**Helps with:**
-- PySpark optimization and performance tuning
-- ETL pipeline design and best practices
-- Pandas data manipulation
-- Airflow DAG development
+### Python Data Engineering
+- **Activates:** `.py` files, PySpark, Pandas, Airflow
+- **Focus:** PySpark optimization, ETL pipeline design, data manipulation, Airflow DAGs
+- **Triggers:** `*.py`, `pyspark`, `pandas`, `airflow`, `etl`, `dataframe`
 
-**Triggers:** `*.py`, `pyspark`, `pandas`, `airflow`, `etl`, `dataframe`
+### Go Microservices
+- **Activates:** `.go` files, gRPC, microservices
+- **Focus:** Clean architecture, concurrency patterns, gRPC service design, error handling
+- **Triggers:** `*.go`, `grpc`, `microservice`, `goroutine`, `gin`, `echo`
 
-### 2. Go Microservices
-**Activates when:** Working with `.go` files, gRPC, microservices
-**Helps with:**
-- Clean architecture patterns
-- Goroutine and concurrency best practices
-- gRPC service design
-- Error handling and middleware
+### Next.js Development
+- **Activates:** `app/` directory with `.tsx` files
+- **Focus:** App Router patterns, Server/Client Components, data fetching, UI design
+- **Triggers:** `app/*.tsx`, `next.js`, `server component`, `app router`
 
-**Triggers:** `*.go`, `grpc`, `microservice`, `goroutine`, `gin`, `echo`
+### Data Lake Management
+- **Activates:** S3, Glue, Athena operations
+- **Focus:** Medallion architecture, partitioning strategies, query optimization, schema evolution
+- **Triggers:** `s3`, `glue`, `athena`, `data lake`, `medallion`, `parquet`
 
-### 3. Next.js Development
-**Activates when:** Working in `app/` directory with `.tsx` files
-**Helps with:**
-- Next.js 14+ App Router patterns
-- Server Components vs Client Components
-- Data fetching strategies
-- UI component design with shadcn/ui
+### AWS Infrastructure
+- **Activates:** `.tf` files, Terraform, AWS services
+- **Focus:** Infrastructure as Code, security configurations, cost optimization, multi-environment setups
+- **Triggers:** `*.tf`, `terraform`, `cloudformation`, `cdk`, `aws`
 
-**Triggers:** `app/*.tsx`, `next.js`, `server component`, `app router`
+## Specialized Agents
 
-### 4. Data Lake Management
-**Activates when:** Working with S3, Glue, Athena, data lake concepts
-**Helps with:**
-- Medallion architecture (Bronze/Silver/Gold)
-- Data partitioning strategies
-- Query optimization
-- Schema evolution
+Expert agents for complex tasks:
 
-**Triggers:** `s3`, `glue`, `athena`, `data lake`, `medallion`, `parquet`
+### Python Data Engineer
+- **Purpose:** Pipeline optimization, ETL design, performance issues
+- **Expertise:** PySpark, data processing, distributed computing
 
-### 5. AWS Infrastructure
-**Activates when:** Working with `.tf` files, Terraform, AWS services
-**Helps with:**
-- Infrastructure as Code best practices
-- Security and IAM configurations
-- Cost optimization
-- Multi-environment setups
+### Go Backend Architect
+- **Purpose:** Microservice design, system architecture, performance
+- **Expertise:** Go patterns, concurrency, API design
 
-**Triggers:** `*.tf`, `terraform`, `cloudformation`, `cdk`, `aws`
+### AWS Infrastructure Architect
+- **Purpose:** Cloud infrastructure, IaC, security, scalability
+- **Expertise:** Terraform, AWS services, architecture patterns
 
-## 👨‍💻 Specialized Agents (6)
+### Data Lake Architect
+- **Purpose:** Data lake design, query optimization, data modeling
+- **Expertise:** Medallion architecture, big data patterns
 
-For complex tasks, invoke expert agents:
+### DevOps SRE Agent
+- **Purpose:** Kubernetes, CI/CD, monitoring, deployment
+- **Expertise:** K8s, observability, automation
 
-### 1. Python Data Engineer
-**For:** Pipeline optimization, ETL design, performance issues
-**Expertise:** PySpark, data processing, distributed computing
+### Fullstack Architect
+- **Purpose:** End-to-end features, API integration, system design
+- **Expertise:** Full stack development, integration patterns
 
-### 2. Go Backend Architect
-**For:** Microservice design, system architecture, performance
-**Expertise:** Go patterns, concurrency, API design
-
-### 3. AWS Infrastructure Architect
-**For:** Cloud infrastructure, IaC, security, scalability
-**Expertise:** Terraform, AWS services, architecture patterns
-
-### 4. Data Lake Architect
-**For:** Data lake design, query optimization, data modeling
-**Expertise:** Medallion architecture, big data patterns
-
-### 5. DevOps SRE Agent
-**For:** Kubernetes, CI/CD, monitoring, deployment
-**Expertise:** K8s, observability, automation
-
-### 6. Fullstack Architect
-**For:** End-to-end features, API integration, system design
-**Expertise:** Full stack development, integration patterns
-
-## ⚙️ How It Works
+## System Architecture
 
 ### Auto-Activation System
 
-The system uses hooks and skill rules to automatically detect context:
+The system uses hooks and skill rules for automatic context detection:
 
 1. **File Detection:** Monitors file paths and extensions
 2. **Content Analysis:** Scans for technology keywords
@@ -156,81 +126,47 @@ Skills are defined in `skills/skill-rules.json`:
 
 ### Customization
 
-To adjust triggers:
+To adjust activation triggers:
 1. Edit `skills/skill-rules.json`
-2. Add your project-specific patterns
+2. Add project-specific patterns
 3. Adjust priority values (higher = more likely to activate)
 
-## 📊 System Stats
+## Usage Examples
 
-- **Total Skills:** 5 auto-activating
-- **Total Agents:** 6 specialized experts
-- **Documentation:** 4,500+ lines
-- **Languages Supported:** Python, Go, TypeScript
-- **Frameworks:** 8+ (PySpark, Airflow, Gin, Next.js, Terraform, K8s, etc.)
-- **AWS Services:** 15+ integrated
-
-## 🚀 Usage Examples
-
-### Example 1: Working with PySpark
+### Working with PySpark
 
 ```python
-# You edit: services/python/etl/process_events.py
+# File: services/python/etl/process_events.py
 from pyspark.sql import SparkSession
 
 df = spark.read.parquet("s3://bucket/data/")
 ```
 
-**Claude suggests:**
-> "I notice you're working with PySpark. The `python-data-engineering` skill can help with optimization patterns, performance tuning, and ETL best practices. Would you like me to activate it?"
+Claude automatically suggests the `python-data-engineering` skill for optimization patterns and ETL best practices.
 
-### Example 2: Building Go Service
+### Building Go Services
 
 ```go
-// You edit: services/go/api/handlers.go
+// File: services/go/api/handlers.go
 func HandleRequest(ctx context.Context) error {
     // implementation
 }
 ```
 
-**Claude suggests:**
-> "I see you're working with Go. The `go-microservices` skill provides clean architecture patterns, concurrency best practices, and error handling guidance. Activate it?"
+Claude automatically suggests the `go-microservices` skill for clean architecture patterns and concurrency guidance.
 
-### Example 3: Complex Task with Agent
-
-```
-You: "This Spark job processes 100GB and takes 2 hours. How can I optimize it?"
-
-Claude: [Automatically invokes python-data-engineer agent]
-"I'll analyze your Spark job for optimization opportunities..."
-```
-
-## 🎓 Documentation
-
-| Document | Purpose |
-|----------|---------|
-| [GETTING_STARTED.md](GETTING_STARTED.md) | Complete onboarding guide |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | System architecture deep-dive |
-| [SUMMARY.md](SUMMARY.md) | Infrastructure summary & stats |
-| [skills/](skills/) | Individual skill documentation |
-| [agents/](agents/) | Agent definitions and use cases |
-
-## 🔧 Configuration Files
+## Configuration Files
 
 ### Essential Files
 - `skills/skill-rules.json` - Skill activation triggers
-- `hooks/user-prompt-submit.sh` - Auto-activation hook
+- `hooks/skill-activation-prompt.sh` - Auto-activation hook
+- `hooks/post-tool-use-tracker.sh` - File tracking hook
 - `settings.local.json` - User preferences
 
 ### Modifying Skills
 
-To add new triggers to a skill:
+To add new triggers:
 
-1. Edit `skills/skill-rules.json`
-2. Add patterns under the skill name
-3. Test by editing matching files
-
-Example:
 ```json
 {
   "python-data-engineering": {
@@ -241,60 +177,43 @@ Example:
 }
 ```
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
-### Skills Not Activating?
+### Skills Not Activating
 
-1. Check `skills/skill-rules.json` for correct patterns
-2. Verify hooks are enabled in Claude Code settings
-3. Look for file pattern matches in your current file
+1. Verify `skills/skill-rules.json` contains correct patterns
+2. Ensure hooks are enabled in Claude Code settings
+3. Check file patterns match current working files
 
-### Agent Not Available?
+### Agent Not Available
 
-1. Check the agent file exists in `agents/` directory
-2. Verify the agent is properly documented
-3. Try explicitly requesting the agent by name
+1. Verify agent file exists in `agents/` directory
+2. Check agent documentation is complete
+3. Request agent explicitly by name
 
-## 📈 Benefits
+## System Statistics
 
-- ✅ **Faster Development:** Context-aware suggestions reduce research time
-- ✅ **Best Practices:** Skills embed production-proven patterns
-- ✅ **Multi-Technology:** Seamless support across Python, Go, TypeScript
-- ✅ **Auto-Discovery:** No need to remember commands or docs
-- ✅ **Expert Help:** Specialized agents for complex problems
-- ✅ **Customizable:** Adjust triggers to match your workflow
+- **Skills:** 5 auto-activating
+- **Agents:** 6 specialized experts
+- **Documentation:** 4,500+ lines
+- **Languages:** Python, Go, TypeScript
+- **Frameworks:** PySpark, Airflow, Gin, Next.js, Terraform, Kubernetes
+- **AWS Services:** 15+ integrated
 
-## 🎯 Next Steps
-
-1. **Read** [GETTING_STARTED.md](GETTING_STARTED.md) for detailed onboarding
-2. **Explore** individual skill documentation in `skills/`
-3. **Try** editing files and watch skills activate
-4. **Invoke** an agent for a complex task
-5. **Customize** `skill-rules.json` for your needs
-
-## 🤝 Contributing
+## Contributing
 
 To add new skills or agents:
 
 1. Follow the structure in existing skills/agents
 2. Update `skill-rules.json` with activation triggers
-3. Document the skill/agent thoroughly
+3. Document thoroughly
 4. Test with relevant file types
 
-## 📞 Support
+## Repository Information
 
 - **Repository:** [github.com/CROW-B3/.claude](https://github.com/CROW-B3/.claude)
 - **Issues:** [GitHub Issues](https://github.com/CROW-B3/.claude/issues)
-- **Main Project:** Located in parent directory `../`
-
-## 📄 License
-
-MIT License - Part of the AWS Data Lake Platform project
-
----
-
-**Status:** Active Development
-**Last Updated:** 2025-11-04
-**Version:** 1.0.0
-
-🚀 **Your AI development assistant is ready! Start coding and watch the magic happen.**
+- **License:** MIT License
+- **Status:** Active Development
+- **Last Updated:** 2025-11-04
+- **Version:** 1.0.0
