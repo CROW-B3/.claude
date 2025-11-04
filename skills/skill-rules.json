@@ -270,6 +270,46 @@
           "apiVersion:.*apps/v1"
         ]
       }
+    },
+    "web-research": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "description": "Web research and information gathering for technical documentation, best practices, and competitive analysis",
+      "promptTriggers": {
+        "keywords": [
+          "search",
+          "research",
+          "find",
+          "lookup",
+          "documentation",
+          "best practice",
+          "compare",
+          "comparison",
+          "latest",
+          "how to",
+          "tutorial",
+          "guide",
+          "example",
+          "benchmark",
+          "performance comparison",
+          "competitive analysis",
+          "industry standard",
+          "trends",
+          "stack overflow",
+          "github issue"
+        ],
+        "intentPatterns": [
+          "(search|find|lookup|research).*?(documentation|docs|api|guide)",
+          "(what is|how to|how do).*?(best|recommended|practice)",
+          "(compare|vs|versus|difference).*?(framework|library|tool|approach)",
+          "(find|show|get).*?(example|sample|code|implementation)",
+          "(check|verify|validate).*?(compatibility|version|support)",
+          "(what are|what is).*?(latest|current|new|emerging)",
+          "(benchmark|performance|speed).*?comparison",
+          "(research|investigate|explore).*?(solution|option|alternative)"
+        ]
+      }
     }
   },
   "notes": {

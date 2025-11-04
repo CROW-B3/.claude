@@ -19,20 +19,22 @@ The system operates automatically:
 
 ```
 .claude/
-├── skills/                    # 5 Auto-activating skills
+├── skills/                    # 6 Auto-activating skills
 │   ├── python-data-engineering/
 │   ├── go-microservices/
 │   ├── nextjs-development/
 │   ├── data-lake-management/
 │   ├── aws-infrastructure/
+│   ├── web-research/
 │   └── skill-rules.json       # Activation triggers
-├── agents/                    # 6 Specialized expert agents
+├── agents/                    # 7 Specialized expert agents
 │   ├── python-data-engineer.md
 │   ├── go-backend-architect.md
 │   ├── aws-infrastructure-architect.md
 │   ├── data-lake-architect.md
 │   ├── devops-sre-agent.md
-│   └── fullstack-architect.md
+│   ├── fullstack-architect.md
+│   └── web-research-agent.md
 ├── hooks/                     # Auto-activation system
 │   ├── skill-activation-prompt.sh
 │   ├── skill-activation-prompt.ts
@@ -71,6 +73,11 @@ Skills automatically activate based on file context and content:
 - **Focus:** Infrastructure as Code, security configurations, cost optimization, multi-environment setups
 - **Triggers:** `*.tf`, `terraform`, `cloudformation`, `cdk`, `aws`
 
+### Web Research
+- **Activates:** Research and documentation queries
+- **Focus:** Technical documentation search, best practices discovery, competitive analysis, code examples
+- **Triggers:** `search`, `research`, `find`, `documentation`, `best practice`, `compare`, `how to`, `example`
+
 ## Specialized Agents
 
 Expert agents for complex tasks:
@@ -98,6 +105,10 @@ Expert agents for complex tasks:
 ### Fullstack Architect
 - **Purpose:** End-to-end features, API integration, system design
 - **Expertise:** Full stack development, integration patterns
+
+### Web Research Agent
+- **Purpose:** Technical documentation research, best practices discovery, competitive analysis
+- **Expertise:** Web searching, information synthesis, source validation, trend analysis
 
 ## System Architecture
 
@@ -193,9 +204,9 @@ To add new triggers:
 
 ## System Statistics
 
-- **Skills:** 5 auto-activating
-- **Agents:** 6 specialized experts
-- **Documentation:** 4,500+ lines
+- **Skills:** 6 auto-activating
+- **Agents:** 7 specialized experts
+- **Documentation:** 5,000+ lines
 - **Languages:** Python, Go, TypeScript
 - **Frameworks:** PySpark, Airflow, Gin, Next.js, Terraform, Kubernetes
 - **AWS Services:** 15+ integrated
